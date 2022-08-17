@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
 import './Memotest.css';
 import FancyButton from '../small/FancyButton';
@@ -26,10 +25,12 @@ const useMemotestGameState = (gameEnded) => {
     const [selectedColorBox, setselectedColorBox] = useState(null)
     const [animating, setAnimating] = useState(false)
     const [contadorTurnos, setcontadorTurnos] = useState(0)
-
+    console.log(contadorTurnos)
     const [estadoActual, setEstadoActual] = useState(gameEnded)
 
     useEffect( () =>{
+        const coloresBase = ['rojo', 'azul', 'verde', 'amarillo', 'negro', 'violeta']
+        const coloresDuplic = [...coloresBase, ...coloresBase]
         const shuffledColours = configurarCuadros(coloresDuplic)
         setShuffledMemotest(
             shuffledColours.map((colour, index) => (
@@ -49,6 +50,7 @@ const useMemotestGameState = (gameEnded) => {
             setselectedColorBox(memoBlock)
         }else if(selectedColorBox.colour === memoBlock.colour){
             setselectedColorBox(null)
+            setcontadorTurnos(contadorTurnos+1)
         }else{
             setAnimating(true)
             setcontadorTurnos(contadorTurnos+1)
