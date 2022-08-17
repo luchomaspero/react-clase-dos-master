@@ -1,0 +1,27 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: 100vh;
+  text-align: center;
+  background-color: #333;
+  color: white;
+}
+
+.app-content {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.app-page-title {
+  font-size: 28px;
+}
+
+.app-navigation {
+  border: 1px solid black;
+  background-color: #507c36;
+  border-top: none;
+}

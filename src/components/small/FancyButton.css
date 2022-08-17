@@ -1,0 +1,27 @@
+.fancy-button {
+  background-color: #507c36;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid black;
+}
+
+.fancy-button:hover,
+.fancy-button:focus,
+.fancy-button--active {
+  background-color: #365324;
+}
+
+.fancy-button--navigation {
+  border: none;
+  border-right: 1px solid black;
+}
+
+.fancy-button--navigation:first-child {
+  border-left: 1px solid black;
+}

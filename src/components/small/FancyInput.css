@@ -1,0 +1,21 @@
+.fancy-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  transition: border-bottom ease-in-out 0.2s;
+}
+
+.fancy-input:focus {
+  border-bottom-color: rgb(0, 0, 90);
+}
+
+.fancy-input--dark {
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+.fancy-input--light {
+  color: black;
+  border-bottom: 1px solid black;
+}
