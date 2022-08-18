@@ -46,7 +46,7 @@ const pages = {
 };
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('memotest');
+  const [currentPage, setCurrentPage] = useState('home');
   const CurrentComponent = pages[currentPage].component;
   return (
     <div className="app">
