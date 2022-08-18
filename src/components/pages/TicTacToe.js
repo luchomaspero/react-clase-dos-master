@@ -39,7 +39,7 @@ Square.propTypes = {
 const WinnerCard = ({ show, winner, onRestart = () => {} }) => {
   return (
     <div className={cx('winner-card', { 'winner-card--hidden': !show })}>
-      <span className="winner-card-text">
+      <span className={cx({ 'winner-card-text': !show })}>
         {winner ? `Player ${winner} has won the game!` : "It's a tie!"}
       </span>
       <FancyButton onClick={onRestart}>Play again?</FancyButton>
